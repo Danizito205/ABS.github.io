@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia B&S</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="img/icono.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Menu-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/subicono.png" alt="Logo" width="70" height="60" class="me-2">
+                <span class="fs-4 fw-bold">B&S</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link fs-5" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="servicio.html">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Formulario-->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <form class="row g-3 needs-validation" method="get">
+                <div class="col-md-4">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                </div>
+                <div class="col-md-4">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" maxlength="9" id="telefono" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                </div>
+                <div class="col-4">
+                    <select class="form-select" id="categoria" required>
+                        <option value="" disabled selected>Elige tú categoría</option>
+                        <option value="s14">Sub-14</option>
+                        <option value="s17">Sub-17</option>
+                        <option value="mayores">Libre/Mayores(+18)</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <select class="form-select" id="nivel" required>
+                        <option value="" disabled selected>Selecciona tu nivel</option>
+                        <option value="b">Nivel Básico</option>
+                        <option value="i">Nivel Intermedio</option>
+                        <option value="m">Nivel Máster</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <select class="form-select" id="Sede" required>
+                        <option value="" disabled selected>Sede</option>
+                        <option value="LM">La Molina</option>
+                        <option value="BR">Barranco</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                    <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="btn btn-warning me-2" type="submit">Inscribete</button>
+                    <button class="btn btn-danger me-2" type="reset" id="btnReset">Borrar Datos</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Tabla de información -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestro Equipo</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cargo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bruno Fernando Luna Medinas</td>
+                            <td>Director Técnico Deportivo</td>
+                        </tr>
+                        <tr>
+                            <td>Sebastian Soria</td>
+                            <td>Coordinador General </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Mapa de ubicación -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-6">Nuestras sedes</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.6415817153857!2d-77.0214917!3d-12.136657900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b7fb4975d7fd%3A0x3567e564254d8ffc!2sI.E.%20N%207032%20Virgen%20Del%20Pilar%20-%20Barranco!5e0!3m2!1ses-419!2spe!4v1752639411111!5m2!1ses-419!2spe"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4639.333227052729!2d-76.94325954903046!3d-12.098546970487345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7161f4e25df%3A0x9783b1789aea1cf9!2sLos%20Pinos%2C%20El%20Establo%2C%20Lima%2015024!5e0!3m2!1ses-419!2spe!4v1752639318897!5m2!1ses-419!2spe"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Toast de felicitación -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+        <div id="toastSuccess" class="toast align-items-center text-bg-warning border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    ¡Felicitaciones! En un momento nos comunicaremos con usted.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Cerrar"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0"> &copy; Academia B&S</p>
+        <p class="mb-0">Todos los Derechos Reservados</p>
+        <div class="mt-2">
+            <a href="https://www.facebook.com/profile.php?id=61555011542246&sk=photos&locale=nl_BE"
+                class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/academia_b_s?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@academia_b_s" class="text-white fs-4"><i class="bi bi-tiktok"></i></a>
+        </div>
+    </footer>
+    <script>
+    /*Validación de formulario + Toast*/
+        (() => {
+            const form = document.querySelector('.needs-validation');
+            const toastElement = document.getElementById('toastSuccess');
+            const toast = new bootstrap.Toast(toastElement);
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                if (form.checkValidity()) {
+                    toast.show();
+                    form.reset();
+                    form.classList.remove('was-validated');
+                } else {
+                    form.classList.add('was-validated');
+                }
+            });
+        })();
+    /*Escoger categoría y nivel*/
+        document.getElementById('categoria').addEventListener('change', function () {
+            const nivel = document.getElementById('nivel');
+            const categoria = this.value;
+
+            // Mostrar todas las opciones primero
+            Array.from(nivel.options).forEach(opt => opt.hidden = false);
+
+            if (categoria === 's14') {
+                nivel.options[1].hidden = false; // Básico
+                nivel.options[2].hidden = false; // Intermedio
+                nivel.options[3].hidden = true;  // Máster
+                nivel.value = ""; // Reset selección
+            } else if (categoria === 's17') {
+                nivel.options[1].hidden = true; // Básico
+                nivel.options[2].hidden = false; // Intermedio
+                nivel.options[3].hidden = false; // Máster
+                nivel.value = "";
+            } else if (categoria === 'mayores') {
+                nivel.options[1].hidden = true;  // Básico
+                nivel.options[2].hidden = false; // Intermedio
+                nivel.options[3].hidden = false; // Máster
+                nivel.value = "";
+            }
+        });
+    </script>
+    <!-- Botón flotante de WhatsApp -->
+    <div class="WhatsApp">
+        <a href="https://wa.me/51917000783" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+</body>
+</html>
